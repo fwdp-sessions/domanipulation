@@ -68,7 +68,7 @@ submitButton.innerText = "Submit"
 
 let passwordStorage
 let revealPassword = () => {
-    if (showPassword.checked) password.type = "input"
+    if (showPassword.checked) password.type = "text"
     else password.type = "password"
 }
 submitButton.onclick = () => {
