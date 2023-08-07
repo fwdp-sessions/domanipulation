@@ -51,12 +51,22 @@ logoForVite.innerHTML=
 const logoBtn = document.createElement('button');
 logoBtn.textContent = 'Toggle Vite Logo';
 logoBtn.addEventListener('click', () => {
+<<<<<<< HEAD
   if (logo.style.display === 'none') {
     logo.style.display = 'block';
   } else {
     logo.style.display = 'none';
   }
 });
+=======
+    if (logoForVite.style.display === "none") {
+        logoForVite.style.display = "block";
+        
+      } else {
+        logoForVite.style.display = "none";
+      }
+})
+>>>>>>> dcb7987 (Change variable naming convention into camelCase and more specific, Change the password input type from show to text)
 
 const form = document.createElement('form');
 
@@ -68,10 +78,21 @@ submit.innerText = 'Submit';
 form.appendChild(PasswordInput);
 form.appendChild(submit);
 
+<<<<<<< HEAD
 const passwordType = document.createElement('button');
+=======
+const passwordInput = document.createElement("input")
+passwordInput.type="password"
+passwordInput.style.height ="35px"
+const submit = document.createElement("button")
+submit.innerText="Submit"
+form.appendChild(passwordInput)
+form.appendChild(submit)
+>>>>>>> dcb7987 (Change variable naming convention into camelCase and more specific, Change the password input type from show to text)
 
 passwordType.innerText = 'Show Password';
 passwordType.addEventListener('click', () => {
+<<<<<<< HEAD
   if (PasswordInput.type === 'password') {
     PasswordInput.type = 'show';
   } else {
@@ -84,5 +105,19 @@ Page.appendChild(logo);
 Page.appendChild(logoBtn);
 Page.appendChild(form);
 Page.appendChild(passwordType);
+=======
+    if(passwordInput.type ==="password"){
+        passwordInput.type="text"
+    }
+    else {passwordInput.type ="password"}
+    
+})
+
+Page.appendChild(counterBtn)
+Page.appendChild(logoForVite)
+Page.appendChild(logoBtn)
+Page.appendChild(form)
+Page.appendChild(passwordType)
+>>>>>>> dcb7987 (Change variable naming convention into camelCase and more specific, Change the password input type from show to text)
 // Code should end here
 //--------------------------------------------
