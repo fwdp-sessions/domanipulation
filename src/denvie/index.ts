@@ -32,6 +32,7 @@ viteSection.style.alignItems = "center";
 viteSection.style.gap = "10px";
 viteLogo.width = 100;
 viteLogo.src = "vite.svg";
+viteLogo.style.display = "none";
 counter.innerText = updateCounterText();
 counter.onclick = incrementCounterValue;
 toggleViteBtn.innerText = "Toggle Vite Logo";
@@ -53,6 +54,12 @@ function togglePassword() {
 
 function updateCounterText() {
     counterValue += 1;
+    if (counterValue === 0) {
+        return `Click me uwu 🥰`;
+    }
+    if (counterValue === 1) {
+        return `clicked ${counterValue} time`;
+    }
     return `clicked ${counterValue} times`;
 }
 
