@@ -24,7 +24,7 @@ viteButton.innerText = "Vite Toggle"
 viteButton.onclick = () => viteToggle()
 
 let viteButtonState = 0
-
+let viteImageContainer = document.createElement("div")
 let viteImage = document.createElement("img")
 viteImage.src = "/vite.svg"
 
@@ -38,14 +38,15 @@ let buttonCounter = () => {
 let viteToggle = () => {
     if (viteButtonState == 1) {
         viteButtonState = 0
-        Page.removeChild(viteImage)
+        viteImageContainer.removeChild(viteImage)
     } else if (viteButtonState == 0) {
         viteButtonState = 1
-        Page.appendChild(viteImage)
+        viteImageContainer.appendChild(viteImage)
     }
 }
 
 let twoButtons = document.createElement("div")
+twoButtons.appendChild(viteImageContainer)
 twoButtons.appendChild(jellyButton)
 twoButtons.appendChild(viteButton)
 
@@ -53,21 +54,33 @@ twoButtons.appendChild(viteButton)
 let passwordForm = document.createElement("form")
 let password = document.createElement("input")
 password.type = "password"
-let submit = document.createElement("input")
-submit.type = "submit"
-
+let showPassword = document.createElement("input")
+showPassword.type = "checkbox"
 
 let listenEvents = document.createElement("div")
 passwordForm.appendChild(password)
-passwordForm.appendChild(submit)
+passwordForm.appendChild(showPassword)
 listenEvents.appendChild(passwordForm)
 
-let buttonOutsideListenEvents = document.createElement("button")
-buttonOutsideListenEvents.innerText = "Trigger password type...?"
+let submitButton = document.createElement("button")
+submitButton.innerText = "Submit"
 
+
+let passwordStorage
+let revealPassword = () => {
+    if (showPassword.checked) password.type = "text"
+    else password.type = "password"
+}
+submitButton.onclick = () => {
+    passwordStorage = {"password": password.value}
+    console.log(passwordStorage)
+}
+showPassword.addEventListener("click", () => {revealPassword()})
+
+// Render everything to append to Page
 Page.appendChild(twoButtons)
 Page.appendChild(listenEvents)
-Page.appendChild(buttonOutsideListenEvents)
+Page.appendChild(submitButton)
 
 // Code should end here
 //--------------------------------------------
