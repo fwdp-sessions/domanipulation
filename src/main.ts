@@ -1,45 +1,45 @@
-import "./style.css";
-import { Navbar as Navigation } from "./components/Navbar";
-import { Page as Matchu } from "./matchu";
-import { Page as Jellyfish } from "./jellyfish";
-import { Page as Daydreamer } from "./daydreamer";
-import { Page as Denvie } from "./denvie";
-import { Page as Denver } from "./denver";
-import { Page as Oshi } from "./oshi";
-import { Page as Hotdog } from "./hotdog";
+import './style.css';
+import { Navbar as Navigation } from './components/Navbar';
+import { Page as Matchu } from './matchu';
+import { Page as Jellyfish } from './jellyfish';
+import { Page as Daydreamer } from './daydreamer';
+import { Page as Denvie } from './denvie';
+import { Page as Denver } from './denver';
+import { Page as Oshi } from './oshi';
+import { Page as Hotdog } from './hotdog';
 
 export const LOCATION = location.pathname;
 
-const App = document.getElementById("app")!;
+const App = document.getElementById('app')!;
 
-const homeDiv = document.createElement("div");
+const homeDiv = document.createElement('div');
 homeDiv.innerHTML = `<h1>Home</h1>`;
 
 const renderElement = (element: HTMLElement) => {
-    App!.appendChild(element);
+  App!.appendChild(element);
 };
 
 const bootstrap = () => {
-    App.appendChild(Navigation);
-    if (LOCATION === "/") {
-        renderElement(homeDiv);
-    } else if (LOCATION === "/matchu") {
-        renderElement(Matchu);
-    } else if (LOCATION === "/jellyfish") {
-        renderElement(Jellyfish);
-    } else if (LOCATION === "/daydreamer") {
-        renderElement(Daydreamer);
-    } else if (LOCATION === "/denvie") {
-        renderElement(Denvie);
-    } else if (LOCATION === "/oshi") {
-        renderElement(Oshi);
-    } else if (LOCATION === "/denver") {
-        renderElement(Denver);
-    } else if (LOCATION === "/hotdog") {
-        renderElement(Hotdog);
-    } else {
-        renderElement(homeDiv);
-    }
+  App.appendChild(Navigation);
+  if (LOCATION === '/') {
+    renderElement(homeDiv);
+  } else if (LOCATION === '/matchu') {
+    renderElement(Matchu);
+  } else if (LOCATION === '/jellyfish') {
+    renderElement(Jellyfish);
+  } else if (LOCATION === '/daydreamer') {
+    renderElement(Daydreamer);
+  } else if (LOCATION === '/denvie') {
+    renderElement(Denvie);
+  } else if (LOCATION === '/oshi') {
+    renderElement(Oshi);
+  } else if (LOCATION === '/denver') {
+    renderElement(Denver);
+  } else if (LOCATION === '/hotdog') {
+    renderElement(Hotdog);
+  } else {
+    renderElement(homeDiv);
+  }
 };
 
 bootstrap();
