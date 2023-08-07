@@ -31,38 +31,38 @@ logoForVite.innerHTML=
  const logoBtn = document.createElement("button")
 logoBtn.textContent = "Toggle Vite Logo"
 logoBtn.addEventListener('click', () => {
-    if (logo.style.display === "none") {
-        logo.style.display = "block";
+    if (logoForVite.style.display === "none") {
+        logoForVite.style.display = "block";
         
       } else {
-        logo.style.display = "none";
+        logoForVite.style.display = "none";
       }
 })
 
  const form = document.createElement("form")
 
 
-const PasswordInput = document.createElement("input")
-PasswordInput.type="password"
-PasswordInput.style.height ="35px"
+const passwordInput = document.createElement("input")
+passwordInput.type="password"
+passwordInput.style.height ="35px"
 const submit = document.createElement("button")
 submit.innerText="Submit"
-form.appendChild(PasswordInput)
+form.appendChild(passwordInput)
 form.appendChild(submit)
 
  const passwordType = document.createElement("button")
  
 passwordType.innerText="Show Password"
 passwordType.addEventListener('click', () => {
-    if(PasswordInput.type ==="password"){
-        PasswordInput.type="show"
+    if(passwordInput.type ==="password"){
+        passwordInput.type="text"
     }
-    else {PasswordInput.type ="password"}
+    else {passwordInput.type ="password"}
     
 })
 
-Page.appendChild(Btn1)
-Page.appendChild(logo)
+Page.appendChild(counterBtn)
+Page.appendChild(logoForVite)
 Page.appendChild(logoBtn)
 Page.appendChild(form)
 Page.appendChild(passwordType)
