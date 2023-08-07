@@ -10,16 +10,22 @@ if (Page) {
   const counterButton = document.createElement("button");
   const toggleLogoButton = document.createElement("button");
   const logo = document.createElement("img");
+  const form = document.createElement("form");
+  const passwordInput = document.createElement("input");
+  const formSubmitButton = document.createElement("button");
+  const triggerPasswordType = document.createElement("button");
 
-  //add to parent div
   Page.appendChild(counterButton);
   Page.appendChild(toggleLogoButton);
+  Page.appendChild(form);
+  form.appendChild(passwordInput);
+  form.apppendChild(formSubmitButton);
+  Page.appendChild(triggerPasswordType);
 
-  //set element text content
   toggleLogoButton.textContent = `Toggle Vite Logo`;
   counterButton.textContent = `clicked 69 times`;
+    
 
-  //set element image content
   logo.src = `./public/vite.svg`;
 
   let clicks: number = 0;
