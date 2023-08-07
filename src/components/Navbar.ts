@@ -11,7 +11,7 @@ const oshi = document.createElement("li");
 daydreamer.innerHTML = `<a href="/daydreamer">Daydreamer</a>`;
 denver.innerHTML = `<a href="/denver">Denver</a>`;
 denvie.innerHTML = `<a href="/denvie">Denvie</a>`;
-jellyfish.innerHTML = `<a href="/Jellyfish">jellyfish</a>`;
+jellyfish.innerHTML = `<a href="/jellyfish">jellyfish</a>`;
 matchu.innerHTML = `<a href="/matchu">Matchu</a>`;
 oshi.innerHTML = `<a href="/oshi">Oshi</a>`;
 
