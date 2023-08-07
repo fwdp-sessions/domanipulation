@@ -24,7 +24,7 @@ if (Page) {
 
   toggleLogoButton.textContent = `Toggle Vite Logo`;
   counterButton.textContent = `clicked 69 times`;
-    
+
 
   logo.src = `./public/vite.svg`;
 
@@ -44,6 +44,8 @@ if (Page) {
       logoVisibility = false;
     }
   });
+   //TODO: create the listener functionalities here
+   
 }
 
 // Code should end here
