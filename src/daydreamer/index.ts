@@ -21,11 +21,11 @@ Btn1.addEventListener("click", () => {
  const logo = document.createElement("div")
 
 logo.innerHTML=
-                `<img src="src/daydreamer/assets/logo.png" 
-                style="width: 17%; 
+                `<img src="public/vite.svg" 
+                style="width: 10%; 
                 position:absolute;
-                top: 0%;
-                left: 41%;
+                top: 10%;
+                left: 44%;
                 display:block ">`
 
  const logoBtn = document.createElement("button")

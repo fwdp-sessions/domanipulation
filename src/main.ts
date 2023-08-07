@@ -41,5 +41,4 @@ const bootstrap = () => {
         renderElement(homeDiv);
     }
 };
-
-
+bootstrap()
