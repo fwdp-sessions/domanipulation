@@ -5,22 +5,22 @@ Page.innerHTML = "<h1>Daydreamer.</h1>";
 //----------------------------------------
 // Code goes here
 
-const CounterBtn = document.createElement("button")
+const counterBtn = document.createElement("button")
 
-CounterBtn.textContent=("Counter")
+counterBtn.textContent=("Counter")
 
 let counter = 0;
-CounterBtn.addEventListener("click", () => {
+counterBtn.addEventListener("click", () => {
     counter++
     if (counter <= 1){
-        CounterBtn.textContent=`clicked ${counter} time`}
-    else {CounterBtn.textContent=`clicked ${counter} times`}
+        counterBtn.textContent=`clicked ${counter} time`}
+    else {counterBtn.textContent=`clicked ${counter} times`}
    
 })
 
- const logo = document.createElement("div")
+ const logoForVite = document.createElement("div")
 
-logo.innerHTML=
+logoForVite.innerHTML=
                 `<img src="public/vite.svg" 
                 style="width: 10%; 
                 position:absolute;
