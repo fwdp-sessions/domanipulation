@@ -68,6 +68,7 @@ function showViteLogo() {
     }
     viteLogo.style.display = "none";
 }
+
 function handleSubmit(event: Event) {
     event.preventDefault();
     const formDetails = new FormData(form);
