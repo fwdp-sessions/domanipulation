@@ -5,17 +5,17 @@ Page.innerHTML = '<h1>Daydreamer.</h1>';
 //----------------------------------------
 // Code goes here
 
-const Btn1 = document.createElement('button');
+const CounterBtn = document.createElement('button');
 
-Btn1.textContent = 'Counter';
+CounterBtn.textContent = 'Counter';
 
 let counter = 0;
-Btn1.addEventListener('click', () => {
+CounterBtn.addEventListener('click', () => {
   counter++;
   if (counter <= 1) {
-    Btn1.textContent = `clicked ${counter} time`;
+    CounterBtn.textContent = `clicked ${counter} time`;
   } else {
-    Btn1.textContent = `clicked ${counter} times`;
+    CounterBtn.textContent = `clicked ${counter} times`;
   }
 });
 
