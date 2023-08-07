@@ -34,6 +34,7 @@ if (Page) {
     counterButton.textContent = `clicked ${clicks} times`;
   });
 
+  //FIXME: change approach
   let logoVisibility = false;
   toggleLogoButton.addEventListener("click", () => {
     if (logoVisibility === false) {
