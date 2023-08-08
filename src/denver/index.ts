@@ -41,6 +41,7 @@ if (Page) {
     if (clicks > 1) {
       counterButton.textContent = `clicked ${clicks} times`;
     }
+    showLogoEven(clicks, logo);
   });
 
   toggleLogoButton.addEventListener("click", () => {
@@ -51,7 +52,6 @@ if (Page) {
     } // Page.contains(logo)? Page.removeChild(logo):Page.appendChild(logo);
   });
 
- 
   triggerPasswordType.addEventListener("click", () => {
     if (isPasswordType === true) {
       passwordInput.type = "text";
@@ -62,6 +62,17 @@ if (Page) {
     }
   });
 }
+
+const showLogoEven = (counts: number, logo: HTMLImageElement) => {
+  if (counts % 2 === 0) {
+    Page.appendChild(logo);
+  }
+  if (Page.contains(logo)) {
+    if (counts % 2 >= 1) {
+      Page.removeChild(logo);
+    }
+  }
+};
 
 // Code should end here
 //--------------------------------------------
