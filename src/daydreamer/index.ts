@@ -1,5 +1,4 @@
 export const Page = document.createElement('div'); // Do not touch this line
-Page.innerHTML = '<h1>Daydreamer.</h1>';
 //----------------------------------------
 // Code goes inside the -------
 //----------------------------------------
