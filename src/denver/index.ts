@@ -21,7 +21,7 @@ if (Page) {
   form.appendChild(passwordInput);
   form.appendChild(formSubmitButton);
   Page.appendChild(triggerPasswordType);
-  Page.appendChild(logo);
+  //
 
   toggleLogoButton.textContent = `Toggle Vite Logo`;
   counterButton.textContent = `clicked 69 times`;
@@ -30,6 +30,10 @@ if (Page) {
 
   logo.src = viteLogo;
 
+  passwordInput.type = "password";
+  let isPasswordType: boolean = true;
+
+  //TODO: If even number display the logo
   let clicks: number = 0;
   counterButton.addEventListener("click", () => {
     clicks++;
@@ -40,13 +44,23 @@ if (Page) {
   });
 
   toggleLogoButton.addEventListener("click", () => {
-    if(Page.contains(logo)){
+    if (Page.contains(logo)) {
       Page.removeChild(logo);
-    }else{
+    } else {
       Page.appendChild(logo);
-    }// Page.contains(logo)? Page.removeChild(logo):Page.appendChild(logo); 
+    } // Page.contains(logo)? Page.removeChild(logo):Page.appendChild(logo);
   });
-  //TODO: create the listener functionalities here
+
+ 
+  triggerPasswordType.addEventListener("click", () => {
+    if (isPasswordType === true) {
+      passwordInput.type = "text";
+      isPasswordType = false;
+    } else {
+      passwordInput.type = "password";
+      isPasswordType = true;
+    }
+  });
 }
 
 // Code should end here
