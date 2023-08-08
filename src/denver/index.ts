@@ -1,5 +1,5 @@
 export const Page = document.createElement("div"); // Do not touch this line
-
+import viteLogo from "/vite.svg";
 //----------------------------------------
 // Code goes inside the -------
 //----------------------------------------
@@ -19,34 +19,34 @@ if (Page) {
   Page.appendChild(toggleLogoButton);
   Page.appendChild(form);
   form.appendChild(passwordInput);
-  form.apppendChild(formSubmitButton);
+  form.appendChild(formSubmitButton);
   Page.appendChild(triggerPasswordType);
+  Page.appendChild(logo);
 
   toggleLogoButton.textContent = `Toggle Vite Logo`;
   counterButton.textContent = `clicked 69 times`;
+  formSubmitButton.textContent = `Submit`;
+  triggerPasswordType.textContent = `Toggle Password Type`;
 
-
-  logo.src = `./public/vite.svg`;
+  logo.src = viteLogo;
 
   let clicks: number = 0;
   counterButton.addEventListener("click", () => {
     clicks++;
-    counterButton.textContent = `clicked ${clicks} times`;
-  });
-
-  //FIXME: change approach
-  let logoVisibility = false;
-  toggleLogoButton.addEventListener("click", () => {
-    if (logoVisibility === false) {
-      Page.appendChild(logo);
-      logoVisibility = true;
-    } else {
-      Page.removeChild(logo);
-      logoVisibility = false;
+    counterButton.textContent = `clicked ${clicks} time`;
+    if (clicks > 1) {
+      counterButton.textContent = `clicked ${clicks} times`;
     }
   });
-   //TODO: create the listener functionalities here
-   
+
+  toggleLogoButton.addEventListener("click", () => {
+    if(Page.contains(logo)){
+      Page.removeChild(logo);
+    }else{
+      Page.appendChild(logo);
+    }// Page.contains(logo)? Page.removeChild(logo):Page.appendChild(logo); 
+  });
+  //TODO: create the listener functionalities here
 }
 
 // Code should end here
