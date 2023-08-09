@@ -27,6 +27,8 @@ let imageButtonState = 0
 let imageContainer = document.createElement("div")
 let viteImage = document.createElement("img")
 viteImage.src = "/vite.svg"
+let tsImage = document.createElement("img")
+
 
 let buttonCounter = () => {
     counter += 1
