@@ -82,6 +82,11 @@ Page.appendChild(twoButtons)
 Page.appendChild(listenEvents)
 Page.appendChild(submitButton)
 
+// const asdRegister = document.createElement("div")
+// asdRegister.innerHTML = "<p>Never gonna give you up never gonna let you down</p>"
+import longRange from "./register";
+const asdRegister = longRange
+Page.appendChild(asdRegister)
 
 export const LoginPage = document.createElement("div")
     LoginPage.innerHTML = "asd"
