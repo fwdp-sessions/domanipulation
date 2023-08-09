@@ -41,6 +41,7 @@ let viteToggle = () => {
         viteImageContainer.removeChild(viteImage)
     } else if (viteButtonState == 0) {
         viteButtonState = 1
+        if (counter % 2 == 0 ) 
         viteImageContainer.appendChild(viteImage)
     }
 }
