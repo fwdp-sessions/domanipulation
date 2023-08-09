@@ -86,6 +86,18 @@ Page.appendChild(twoButtons)
 Page.appendChild(listenEvents)
 Page.appendChild(submitButton)
 
+export const LoginPage = () => {
+    console.log("LOGIN PAGE")
+}
+
+export const SignOut = () => {
+    console.log("SIGN OUT")
+}
+
+export const dashboard = () => {
+    console.log("DASHBOARD")
+}
+
 // Code should end here
 //--------------------------------------------
 export default Page; // Do not touch this line
