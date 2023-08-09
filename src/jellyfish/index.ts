@@ -9,10 +9,6 @@ export const Page = document.createElement("div"); // Do not touch this line
 Page.innerHTML = "<h1>Jellyfish.</h1>";
 
 //  THe following is the code for the "Create 2 Buttons" requirement.
-//  Structure goes as follows:
-//  | twoButtons
-//      | jellyButton: buttonCounter()
-//      | viteButton: viteToggle()
 
 let counter = 0
 let jellyButton = document.createElement("button")
