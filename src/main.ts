@@ -2,6 +2,9 @@ import "./style.css";
 import { Navbar as Navigation } from "./components/Navbar";
 import { Page as Matchu } from "./matchu";
 import { Page as Jellyfish } from "./jellyfish";
+import { LoginPage as JellyfishLogin } from "./jellyfish"
+import { RegisterPage as JellyfishRegister } from "./jellyfish"
+import { dashboard as JellyfishDashboard } from "./jellyfish"
 import { Page as Daydreamer } from "./daydreamer";
 import { Page as Denvie } from "./denvie";
 import { Page as Denver } from "./denver";
@@ -40,11 +43,11 @@ const bootstrap = () => {
   } else if (LOCATION === "/jellyfish") {
     renderElement(Jellyfish);
   } else if (LOCATION === "/jellyfish/login") {
-    // renderElement(JellyfishLogin);
+    renderElement(JellyfishLogin);
   } else if (LOCATION === "/jellyfish/register") {
-    renderElement(Jellyfish);
+    renderElement(JellyfishRegister);
   } else if (LOCATION === "/jellyfish/dashboard") {
-    renderElement(Jellyfish);
+    renderElement(JellyfishDashboard);
   } else if (LOCATION === "/daydreamer") {
     renderElement(Daydreamer);
   } else if (LOCATION === "/daydreamer/login") {

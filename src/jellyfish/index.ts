@@ -86,6 +86,10 @@ export const LoginPage = () => {
     console.log("LOGIN PAGE")
 }
 
+export const RegisterPage = () => {
+    console.log("REGISTER PAGE")
+}
+
 export const SignOut = () => {
     console.log("SIGN OUT")
 }
