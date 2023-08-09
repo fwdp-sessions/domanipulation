@@ -82,21 +82,19 @@ Page.appendChild(twoButtons)
 Page.appendChild(listenEvents)
 Page.appendChild(submitButton)
 
-export const LoginPage = () => {
-    console.log("LOGIN PAGE")
-}
 
-export const RegisterPage = () => {
-    console.log("REGISTER PAGE")
-}
+export const LoginPage = document.createElement("div")
+    LoginPage.innerHTML = "asd"
+
+export const RegisterPage = document.createElement("div")
+    RegisterPage.innerHTML = "asd"
 
 export const SignOut = () => {
     console.log("SIGN OUT")
 }
 
-export const dashboard = () => {
-    console.log("DASHBOARD")
-}
+export const dashboard = document.createElement("div")
+    dashboard.innerHTML = "asd"
 
 // Code should end here
 //--------------------------------------------
