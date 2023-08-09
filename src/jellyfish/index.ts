@@ -38,13 +38,13 @@ let buttonCounter = () => {
 }
 
 let viteToggle = () => {
+    console.log(tsImage)
     if (imageButtonState == 1) {
         imageButtonState = 0
-        if (counter % 2 == 0)  imageContainer.removeChild(tsImage)
-        else imageContainer.removeChild(viteImage)
+        imageContainer.innerHTML = ""
     } else if (imageButtonState == 0) {
         imageButtonState = 1
-        if (counter % 2 == 0)  imageContainer.appendChild(tsImage)
+        if (counter % 2 == 0) imageContainer.appendChild(tsImage)
         else imageContainer.appendChild(viteImage)
     }
 }
