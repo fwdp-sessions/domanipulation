@@ -28,7 +28,7 @@ let imageContainer = document.createElement("div")
 let viteImage = document.createElement("img")
 viteImage.src = "/vite.svg"
 let tsImage = document.createElement("img")
-
+tsImage.src = "/src/typescript.svg"
 
 let buttonCounter = () => {
     counter += 1
@@ -40,11 +40,12 @@ let buttonCounter = () => {
 let viteToggle = () => {
     if (imageButtonState == 1) {
         imageButtonState = 0
-        imageContainer.removeChild(viteImage)
+        if (counter % 2 == 0)  imageContainer.removeChild(tsImage)
+        else imageContainer.removeChild(viteImage)
     } else if (imageButtonState == 0) {
         imageButtonState = 1
-        if (counter % 2 == 0) 
-        imageContainer.appendChild(viteImage)
+        if (counter % 2 == 0)  imageContainer.appendChild(tsImage)
+        else imageContainer.appendChild(viteImage)
     }
 }
 
