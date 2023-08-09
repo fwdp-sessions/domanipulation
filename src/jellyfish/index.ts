@@ -23,7 +23,7 @@ let viteButton = document.createElement("button")
 viteButton.innerText = "Vite Toggle"
 viteButton.onclick = () => viteToggle()
 
-let viteButtonState = 0
+let imageButtonState = 0
 let imageContainer = document.createElement("div")
 let viteImage = document.createElement("img")
 viteImage.src = "/vite.svg"
@@ -36,11 +36,11 @@ let buttonCounter = () => {
 }
 
 let viteToggle = () => {
-    if (viteButtonState == 1) {
-        viteButtonState = 0
+    if (imageButtonState == 1) {
+        imageButtonState = 0
         imageContainer.removeChild(viteImage)
-    } else if (viteButtonState == 0) {
-        viteButtonState = 1
+    } else if (imageButtonState == 0) {
+        imageButtonState = 1
         if (counter % 2 == 0) 
         imageContainer.appendChild(viteImage)
     }
