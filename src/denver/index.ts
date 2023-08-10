@@ -1,4 +1,8 @@
 export const Page = document.createElement("div"); // Do not touch this line
+import { loginForm } from "./loginPage";
+import { registerForm } from "./registerPage";
+import { dashboard } from "./dashboard";
+
 import viteLogo from "/vite.svg";
 //----------------------------------------
 // Code goes inside the -------
@@ -15,25 +19,38 @@ if (Page) {
   const formSubmitButton = document.createElement("button");
   const triggerPasswordType = document.createElement("button");
 
+  const loginPageLink = document.createElement("a");
+  const registerPageLink = document.createElement("a");
+  const dashboardPageLink = document.createElement("a");
+
+  Page.appendChild(loginPageLink);
+  Page.appendChild(registerPageLink);
+  Page.appendChild(dashboardPageLink);
   Page.appendChild(counterButton);
   Page.appendChild(toggleLogoButton);
   Page.appendChild(form);
   form.appendChild(passwordInput);
   form.appendChild(formSubmitButton);
   Page.appendChild(triggerPasswordType);
-  //
 
   toggleLogoButton.textContent = `Toggle Vite Logo`;
   counterButton.textContent = `clicked 69 times`;
   formSubmitButton.textContent = `Submit`;
   triggerPasswordType.textContent = `Toggle Password Type`;
+  loginPageLink.textContent = `Login Page`;
+  registerPageLink.textContent = `Register Page`;
+  dashboardPageLink.textContent = `Dashboard Page`;
+
+  loginPageLink.href = `/denver/login`;
+  registerPageLink.href = `/denver/register`;
+  dashboardPageLink.href = `/denver/dashboard`;
 
   logo.src = viteLogo;
 
   passwordInput.type = "password";
+
   let isPasswordType: boolean = true;
 
-  //TODO: If even number display the logo
   let clicks: number = 0;
   counterButton.addEventListener("click", () => {
     clicks++;
@@ -77,3 +94,6 @@ const showLogoEven = (counts: number, logo: HTMLImageElement) => {
 // Code should end here
 //--------------------------------------------
 export default Page; // Do not touch this line
+export { loginForm as LoginPage };
+export { registerForm as RegisterPage };
+export { dashboard as DashboardPage };

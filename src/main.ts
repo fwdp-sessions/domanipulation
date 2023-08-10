@@ -13,7 +13,9 @@ import { Page as Hotdog } from "./hotdog";
 // TODO: import { RegisterPage as DaydreamerRegister } from './daydreamer/'
 // TODO: import { DashboardPage as DaydreamerDashboard } from './daydreamer/'
 // Do not touch the example
-
+import { LoginPage as DenverLogin } from "./denver";
+import { RegisterPage as DenverRegister } from "./denver";
+import { DashboardPage as DenverDashboard} from "./denver";
 export const LOCATION = location.pathname;
 
 export type User = {
@@ -83,11 +85,11 @@ const bootstrap = () => {
   } else if (LOCATION === "/denver") {
     renderElement(Denver);
   } else if (LOCATION === "/denver/dashboard") {
-    renderElement(Denver);
+    renderElement(DenverDashboard);
   } else if (LOCATION === "/denver/login") {
-    renderElement(Denver);
+    renderElement(DenverLogin);
   } else if (LOCATION === "/denver/register") {
-    renderElement(Denver);
+    renderElement(DenverRegister);
   } else if (LOCATION === "/hotdog") {
     renderElement(Hotdog);
   } else if (LOCATION === "/hotdog/login") {
