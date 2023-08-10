@@ -14,5 +14,8 @@ flowchart LR
 - [x] Sample refactoring
 - [x] Refactor register
 - [x] Rewrite register to export only one output
-- [ ] Create login
+- [x] Create login
+- [ ] Make password storage
+- [ ] Make working login
 - [ ] Create dashboard
+- [ ] Make editable password storage
