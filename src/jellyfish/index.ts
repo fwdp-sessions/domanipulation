@@ -86,9 +86,7 @@ Page.appendChild(submitButton) // <<<<<<<<----------------- REFACTOR
 
 // const asdRegister = document.createElement("div")
 // asdRegister.innerHTML = "<p>Never gonna give you up never gonna let you down</p>"
-import longRange from "./register";
-const asdRegister = longRange
-Page.appendChild(asdRegister)
+import  from "./register";
 
 export const LoginPage = document.createElement("div")
     LoginPage.innerHTML = "asd"
