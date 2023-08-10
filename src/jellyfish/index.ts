@@ -50,6 +50,7 @@ twoButtons.appendChild(imageContainer)
 twoButtons.appendChild(jellyButton)
 twoButtons.appendChild(viteButton)
 
+// REFACTOR>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // These are the code for the login page requirement.
 let passwordForm = document.createElement("form")
 let password = document.createElement("input")
@@ -76,11 +77,12 @@ submitButton.onclick = () => {
     console.log(passwordStorage)
 }
 showPassword.addEventListener("click", () => {revealPassword()})
+// REFACTOR <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 // Render everything to append to Page
 Page.appendChild(twoButtons)
-Page.appendChild(listenEvents)
-Page.appendChild(submitButton)
+Page.appendChild(listenEvents) // <<<<<<<<----------------- REFACTOR
+Page.appendChild(submitButton) // <<<<<<<<----------------- REFACTOR
 
 // const asdRegister = document.createElement("div")
 // asdRegister.innerHTML = "<p>Never gonna give you up never gonna let you down</p>"
