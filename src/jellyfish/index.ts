@@ -53,14 +53,15 @@ twoButtons.appendChild(viteButton)
 // Render everything to append to Page
 Page.appendChild(twoButtons)
 
-import { output as register } from "./register";
+import { output as register } from "./register"
+import { output as login } from "./login"
 
 let workArea = document.createElement("div")
 Page.appendChild(workArea)
 workArea.appendChild(register)
 
 export const LoginPage = document.createElement("div")
-    LoginPage.innerHTML = "asdLogin"
+    LoginPage.appendChild(login)
 
 export const RegisterPage = document.createElement("div")
     RegisterPage.appendChild(register)

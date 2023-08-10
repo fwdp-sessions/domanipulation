@@ -1,4 +1,7 @@
 // These are the code for the login page requirement.
+let registerMessage = document.createElement("h1")
+registerMessage.innerText = "Register here"
+
 let passwordForm = document.createElement("form")
 let password = document.createElement("input")
 password.type = "password"
@@ -26,5 +29,6 @@ submitButton.onclick = () => {
 showPassword.addEventListener("click", () => {revealPassword()})
 
 export let output = document.createElement("div")
+output.appendChild(registerMessage)
 output.appendChild(listenEvents)
 output.appendChild(submitButton)
