@@ -1,5 +1,9 @@
 export const Page = document.createElement("div"); // Do not touch this line
 
+import { LoginPage } from "./login";
+import { RegisterPage } from "./register";
+import { DashboardPage } from "./dashboard";
+
 //----------------------------------------
 // Code goes inside the -------
 //----------------------------------------
@@ -89,12 +93,13 @@ Page.appendChild(button1);
 Page.appendChild(logoVite);
 Page.appendChild(myForm);
 Page.appendChild(button3);
+
 Page.appendChild(loginLink);
 Page.appendChild(registerLink);
 Page.appendChild(dashboardLink);
 // Code should end here
 //--------------------------------------------
-export { loginLink as LoginPage };
-export { registerLink as RegisterPage };
-export { dashboardLink as DashboardPage };
+export { LoginPage as LoginPage };
+export { RegisterPage as RegisterPage };
+export { DashboardPage as DashboardPage };
 export default Page; // Do not touch this line

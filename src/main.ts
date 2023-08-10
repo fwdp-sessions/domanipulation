@@ -1,11 +1,6 @@
 import "./style.css";
 import { Navbar as Navigation } from "./components/Navbar";
-import {
-  Page as Matchu,
-  LoginPage as MatchuLogin,
-  RegisterPage as MatchuRegister,
-  DashboardPage as MatchuDashboard,
-} from "./matchu";
+import { Page as Matchu } from "./matchu";
 import { Page as Jellyfish } from "./jellyfish";
 import { Page as Daydreamer } from "./daydreamer";
 import { Page as Denvie } from "./denvie";
@@ -18,6 +13,12 @@ import { Page as Hotdog } from "./hotdog";
 // TODO: import { RegisterPage as DaydreamerRegister } from './daydreamer/'
 // TODO: import { DashboardPage as DaydreamerDashboard } from './daydreamer/'
 // Do not touch the example
+
+import {
+  LoginPage as MatchuLogin,
+  RegisterPage as MatchuRegister,
+  DashboardPage as MatchuDashboard,
+} from "./matchu";
 
 export const LOCATION = location.pathname;
 
