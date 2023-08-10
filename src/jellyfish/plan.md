@@ -4,13 +4,14 @@ The index.ts file will gather exports from all three. I believe the proper word 
 
 ```mermaid.js
 flowchart LR
-    main --> login
-    main --> register
-    main --> dashboard
+    login --> index
+    register/home  --> index
+    dashboard --> index
+    index --> mian
 ```
 
 ## Todo:
-- [ ] Sample refactoring
+- [x] Sample refactoring
 - [ ] Refactor register
 - [ ] Create login
 - [ ] Create dashboard
