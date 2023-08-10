@@ -53,18 +53,17 @@ twoButtons.appendChild(viteButton)
 // Render everything to append to Page
 Page.appendChild(twoButtons)
 
-// const asdRegister = document.createElement("div")
-// asdRegister.innerHTML = "<p>Never gonna give you up never gonna let you down</p>"
-import { listenEvents, submitButton } from "./register";
+import { output as register } from "./register";
 
-Page.appendChild(listenEvents) // <<<<<<<<----------------- REFACTOR
-Page.appendChild(submitButton) // <<<<<<<<----------------- REFACTOR
+let workArea = document.createElement("div")
+Page.appendChild(workArea)
+workArea.appendChild(register)
 
 export const LoginPage = document.createElement("div")
-    LoginPage.innerHTML = "asd"
+    LoginPage.innerHTML = "asdLogin"
 
 export const RegisterPage = document.createElement("div")
-    RegisterPage.innerHTML = "asd"
+    RegisterPage.appendChild(register)
 
 export const SignOut = () => {
     console.log("SIGN OUT")
