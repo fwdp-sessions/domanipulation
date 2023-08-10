@@ -16,6 +16,10 @@ loginShowPassword.addEventListener("click", () => {
     else loginPasswordBox.type = "password"
 })
 
+let loginSubmit = document.createElement("button")
+loginSubmit.innerText = "Login"
+
 export let output = document.createElement("div")
 output.appendChild(loginMessage)
 output.appendChild(loginPasswordArea)
+output.appendChild(loginSubmit)
