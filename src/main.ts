@@ -1,6 +1,11 @@
 import "./style.css";
 import { Navbar as Navigation } from "./components/Navbar";
-import { Page as Matchu } from "./matchu";
+import {
+  Page as Matchu,
+  LoginPage as MatchuLogin,
+  RegisterPage as MatchuRegister,
+  DashboardPage as MatchuDashboard,
+} from "./matchu";
 import { Page as Jellyfish } from "./jellyfish";
 import { Page as Daydreamer } from "./daydreamer";
 import { Page as Denvie } from "./denvie";
@@ -43,11 +48,11 @@ const bootstrap = () => {
   } else if (LOCATION === "/matchu") {
     renderElement(Matchu);
   } else if (LOCATION === "/matchu/login") {
-    renderElement(Matchu);
+    renderElement(MatchuLogin);
   } else if (LOCATION === "/matchu/register") {
-    renderElement(Matchu);
+    renderElement(MatchuRegister);
   } else if (LOCATION === "/matchu/dashboard") {
-    // renderElement(MatchuDashboard);
+    renderElement(MatchuDashboard);
   } else if (LOCATION === "/jellyfish") {
     renderElement(Jellyfish);
   } else if (LOCATION === "/jellyfish/login") {

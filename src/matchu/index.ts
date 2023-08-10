@@ -16,8 +16,6 @@ button1.addEventListener("click", () => {
   button1.innerText = `clicked ${count} times!`;
 });
 
-Page.appendChild(button1);
-
 // Embed the svg file
 const logoVite = document.createElement("div");
 logoVite.innerHTML = "<img src='/public/vite.svg'>";
@@ -35,7 +33,6 @@ button2.addEventListener("click", () => {
 });
 
 // Display Logo if Number is Even
-
 button1.addEventListener("click", () => {
   if (count % 2 == 0) {
     logoVite.style.display = "block";
@@ -43,9 +40,6 @@ button1.addEventListener("click", () => {
     logoVite.style.display = "none";
   }
 });
-
-Page.appendChild(logoVite);
-Page.appendChild(button2);
 
 // Create FORM
 const myForm = document.createElement("form");
@@ -64,9 +58,6 @@ submitButton.type = "submit";
 submitButton.name = "submit";
 submitButton.placeholder = "SUBMIT";
 
-myForm.appendChild(inputPassword);
-myForm.appendChild(submitButton);
-
 // Create the BUTTON 3
 const button3 = document.createElement("input");
 button3.type = "checkbox";
@@ -79,9 +70,31 @@ button3.addEventListener("click", () => {
   }
 });
 
+// Exporting the pages
+const loginLink = document.createElement("a");
+const registerLink = document.createElement("a");
+const dashboardLink = document.createElement("a");
+
+loginLink.href = "/matchu/login";
+dashboardLink.href = "/matchu/dashboard";
+registerLink.href = "/matchu/register";
+
+registerLink.innerText = "Register";
+dashboardLink.innerText = "Dashboard";
+loginLink.innerText = "Login";
+
+myForm.appendChild(inputPassword);
+myForm.appendChild(button2);
+Page.appendChild(button1);
+Page.appendChild(logoVite);
 Page.appendChild(myForm);
 Page.appendChild(button3);
-
+Page.appendChild(loginLink);
+Page.appendChild(registerLink);
+Page.appendChild(dashboardLink);
 // Code should end here
 //--------------------------------------------
+export { loginLink as LoginPage };
+export { registerLink as RegisterPage };
+export { dashboardLink as DashboardPage };
 export default Page; // Do not touch this line
