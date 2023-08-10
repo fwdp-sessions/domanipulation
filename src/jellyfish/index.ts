@@ -51,6 +51,12 @@ twoButtons.appendChild(jellyButton)
 twoButtons.appendChild(viteButton)
 
 // Add register and login buttons
+let registerButton = document.createElement("button")
+registerButton.innerText = "Register"
+registerButton.onclick = () => {
+    window.location.href = "/jellyfish/register"
+}
+
 let loginButton = document.createElement("button")
 loginButton.innerText = "Login"
 loginButton.onclick = () => {
@@ -60,6 +66,7 @@ loginButton.onclick = () => {
 // Render everything to append to Page
 Page.appendChild(twoButtons)
 Page.appendChild(loginButton)
+Page.appendChild(registerButton)
 
 import { output as register } from "./register"
 import { output as login } from "./login"
