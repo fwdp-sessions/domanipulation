@@ -50,43 +50,15 @@ twoButtons.appendChild(imageContainer)
 twoButtons.appendChild(jellyButton)
 twoButtons.appendChild(viteButton)
 
-// REFACTOR>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-// These are the code for the login page requirement.
-let passwordForm = document.createElement("form")
-let password = document.createElement("input")
-password.type = "password"
-let showPassword = document.createElement("input")
-showPassword.type = "checkbox"
-
-let listenEvents = document.createElement("div")
-passwordForm.appendChild(password)
-passwordForm.appendChild(showPassword)
-listenEvents.appendChild(passwordForm)
-
-let submitButton = document.createElement("button")
-submitButton.innerText = "Submit"
-
-
-let passwordStorage
-let revealPassword = () => {
-    if (showPassword.checked) password.type = "text"
-    else password.type = "password"
-}
-submitButton.onclick = () => {
-    passwordStorage = {"password": password.value}
-    console.log(passwordStorage)
-}
-showPassword.addEventListener("click", () => {revealPassword()})
-// REFACTOR <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
 // Render everything to append to Page
 Page.appendChild(twoButtons)
-Page.appendChild(listenEvents) // <<<<<<<<----------------- REFACTOR
-Page.appendChild(submitButton) // <<<<<<<<----------------- REFACTOR
 
 // const asdRegister = document.createElement("div")
 // asdRegister.innerHTML = "<p>Never gonna give you up never gonna let you down</p>"
-import  from "./register";
+import { listenEvents, submitButton } from "./register";
+
+Page.appendChild(listenEvents) // <<<<<<<<----------------- REFACTOR
+Page.appendChild(submitButton) // <<<<<<<<----------------- REFACTOR
 
 export const LoginPage = document.createElement("div")
     LoginPage.innerHTML = "asd"
