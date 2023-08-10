@@ -13,6 +13,6 @@ flowchart LR
 ## Todo:
 - [x] Sample refactoring
 - [x] Refactor register
-- [ ] Rewrite register to export only one output
+- [x] Rewrite register to export only one output
 - [ ] Create login
 - [ ] Create dashboard
