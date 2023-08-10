@@ -15,7 +15,9 @@ flowchart LR
 - [x] Refactor register
 - [x] Rewrite register to export only one output
 - [x] Create login
+- [ ] In register, add "Repeat Password"
 - [ ] Make password storage
 - [ ] Make working login
 - [ ] Create dashboard
 - [ ] Make editable password storage
+- [ ] Rewrite everything
