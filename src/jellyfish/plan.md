@@ -7,7 +7,7 @@ flowchart LR
     login --> index
     register/home  --> index
     dashboard --> index
-    index --> mian
+    index --> main
 ```
 
 ## Todo:
