@@ -50,44 +50,36 @@ twoButtons.appendChild(imageContainer)
 twoButtons.appendChild(jellyButton)
 twoButtons.appendChild(viteButton)
 
-// These are the code for the login page requirement.
-let passwordForm = document.createElement("form")
-let password = document.createElement("input")
-password.type = "password"
-let showPassword = document.createElement("input")
-showPassword.type = "checkbox"
-
-let listenEvents = document.createElement("div")
-passwordForm.appendChild(password)
-passwordForm.appendChild(showPassword)
-listenEvents.appendChild(passwordForm)
-
-let submitButton = document.createElement("button")
-submitButton.innerText = "Submit"
-
-
-let passwordStorage
-let revealPassword = () => {
-    if (showPassword.checked) password.type = "text"
-    else password.type = "password"
+// Add register and login buttons
+let registerButton = document.createElement("button")
+registerButton.innerText = "Register"
+registerButton.onclick = () => {
+    window.location.href = "/jellyfish/register"
 }
-submitButton.onclick = () => {
-    passwordStorage = {"password": password.value}
-    console.log(passwordStorage)
+
+let loginButton = document.createElement("button")
+loginButton.innerText = "Login"
+loginButton.onclick = () => {
+    window.location.href = "/jellyfish/login"
 }
-showPassword.addEventListener("click", () => {revealPassword()})
 
 // Render everything to append to Page
 Page.appendChild(twoButtons)
-Page.appendChild(listenEvents)
-Page.appendChild(submitButton)
+Page.appendChild(loginButton)
+Page.appendChild(registerButton)
 
+import { output as register } from "./register"
+import { output as login } from "./login"
+
+let workArea = document.createElement("div")
+Page.appendChild(workArea)
+workArea.appendChild(register)
 
 export const LoginPage = document.createElement("div")
-    LoginPage.innerHTML = "asd"
+    LoginPage.appendChild(login)
 
 export const RegisterPage = document.createElement("div")
-    RegisterPage.innerHTML = "asd"
+    RegisterPage.appendChild(register)
 
 export const SignOut = () => {
     console.log("SIGN OUT")
