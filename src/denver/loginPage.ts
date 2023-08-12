@@ -1,7 +1,8 @@
-export const loginForm = document.createElement("div");
+import { emailLogin, passwordLogin, loginButton } from "./createElements";
+export const loginForm = document.createElement("form");
 
-const loginFormContents = document.createElement("h1");
-
-loginForm.appendChild(loginFormContents);
-
-loginFormContents.innerText = `Login form contents`;
+if (loginForm) {
+  loginForm.appendChild(emailLogin);
+  loginForm.appendChild(passwordLogin);
+  loginForm.appendChild(loginButton);
+}

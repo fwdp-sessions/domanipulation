@@ -2,7 +2,7 @@ export const Page = document.createElement("div"); // Do not touch this line
 import { loginForm } from "./loginPage";
 import { registerForm } from "./registerPage";
 import { dashboard } from "./dashboard";
-
+import { registerPageLink, email } from "./createElements";
 import viteLogo from "/vite.svg";
 //----------------------------------------
 // Code goes inside the -------
@@ -11,6 +11,7 @@ import viteLogo from "/vite.svg";
 
 if (Page) {
   //create element
+  const requirementsDiv = document.createElement("div");
   const counterButton = document.createElement("button");
   const toggleLogoButton = document.createElement("button");
   const logo = document.createElement("img");
@@ -20,18 +21,18 @@ if (Page) {
   const triggerPasswordType = document.createElement("button");
 
   const loginPageLink = document.createElement("a");
-  const registerPageLink = document.createElement("a");
   const dashboardPageLink = document.createElement("a");
 
   Page.appendChild(loginPageLink);
   Page.appendChild(registerPageLink);
   Page.appendChild(dashboardPageLink);
-  Page.appendChild(counterButton);
-  Page.appendChild(toggleLogoButton);
-  Page.appendChild(form);
+  Page.appendChild(requirementsDiv);
+  requirementsDiv.appendChild(counterButton);
+  requirementsDiv.appendChild(toggleLogoButton);
+  requirementsDiv.appendChild(form);
   form.appendChild(passwordInput);
   form.appendChild(formSubmitButton);
-  Page.appendChild(triggerPasswordType);
+  requirementsDiv.appendChild(triggerPasswordType);
 
   toggleLogoButton.textContent = `Toggle Vite Logo`;
   counterButton.textContent = `clicked 69 times`;
