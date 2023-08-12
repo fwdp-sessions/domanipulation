@@ -19,6 +19,17 @@ import { Page as Hotdog } from "./hotdog";
 
 export const LOCATION = location.pathname;
 
+export type User = {
+  email: string;
+  password: string;
+  firstName: string;
+  lastName: string;
+  address?: string;
+};
+
+// You wil ltarget this to add your users
+export const UserDB: User[] = [];
+
 const App = document.getElementById("app")!;
 
 const homeDiv = document.createElement("div");
