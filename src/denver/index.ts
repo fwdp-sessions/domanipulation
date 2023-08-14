@@ -1,4 +1,12 @@
 export const Page = document.createElement("div"); // Do not touch this line
+import { loginForm } from "./loginPage";
+import { registerForm } from "./registerPage";
+import { dashboard } from "./dashboard";
+import {
+  registerPageLink,
+  loginPageLink,
+  dashboardPageLink,
+} from "./createElements";
 import viteLogo from "/vite.svg";
 //----------------------------------------
 // Code goes inside the -------
@@ -7,6 +15,7 @@ import viteLogo from "/vite.svg";
 
 if (Page) {
   //create element
+  const requirementsDiv = document.createElement("div");
   const counterButton = document.createElement("button");
   const toggleLogoButton = document.createElement("button");
   const logo = document.createElement("img");
@@ -14,26 +23,31 @@ if (Page) {
   const passwordInput = document.createElement("input");
   const formSubmitButton = document.createElement("button");
   const triggerPasswordType = document.createElement("button");
+  
+  Page.appendChild(loginPageLink);
+  Page.appendChild(registerPageLink);
+  Page.appendChild(dashboardPageLink);
 
-  Page.appendChild(counterButton);
-  Page.appendChild(toggleLogoButton);
-  Page.appendChild(form);
+  Page.appendChild(requirementsDiv);
+  requirementsDiv.appendChild(counterButton);
+  requirementsDiv.appendChild(toggleLogoButton);
+  requirementsDiv.appendChild(form);
   form.appendChild(passwordInput);
   form.appendChild(formSubmitButton);
-  Page.appendChild(triggerPasswordType);
-  //
+  requirementsDiv.appendChild(triggerPasswordType);
 
   toggleLogoButton.textContent = `Toggle Vite Logo`;
   counterButton.textContent = `clicked 69 times`;
   formSubmitButton.textContent = `Submit`;
   triggerPasswordType.textContent = `Toggle Password Type`;
+  loginPageLink.textContent = `Login Page`;
 
   logo.src = viteLogo;
 
   passwordInput.type = "password";
+
   let isPasswordType: boolean = true;
 
-  //TODO: If even number display the logo
   let clicks: number = 0;
   counterButton.addEventListener("click", () => {
     clicks++;
@@ -77,3 +91,6 @@ const showLogoEven = (counts: number, logo: HTMLImageElement) => {
 // Code should end here
 //--------------------------------------------
 export default Page; // Do not touch this line
+export { loginForm as LoginPage };
+export { registerForm as RegisterPage };
+export { dashboard as DashboardPage };
