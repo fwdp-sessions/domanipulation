@@ -2,7 +2,7 @@ export const Page = document.createElement("div"); // Do not touch this line
 import { loginForm } from "./loginPage";
 import { registerForm } from "./registerPage";
 import { dashboard } from "./dashboard";
-import { registerPageLink, email } from "./createElements";
+import { registerPageLink} from "./createElements";
 import viteLogo from "/vite.svg";
 //----------------------------------------
 // Code goes inside the -------
@@ -43,7 +43,7 @@ if (Page) {
   dashboardPageLink.textContent = `Dashboard Page`;
 
   loginPageLink.href = `/denver/login`;
-  // registerPageLink.href = `/denver/register`;
+    // registerPageLink.href = `/denver/register`;
   dashboardPageLink.href = `/denver/dashboard`;
 
   logo.src = viteLogo;
