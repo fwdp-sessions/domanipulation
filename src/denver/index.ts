@@ -2,7 +2,11 @@ export const Page = document.createElement("div"); // Do not touch this line
 import { loginForm } from "./loginPage";
 import { registerForm } from "./registerPage";
 import { dashboard } from "./dashboard";
-import { registerPageLink} from "./createElements";
+import {
+  registerPageLink,
+  loginPageLink,
+  dashboardPageLink,
+} from "./createElements";
 import viteLogo from "/vite.svg";
 //----------------------------------------
 // Code goes inside the -------
@@ -19,13 +23,11 @@ if (Page) {
   const passwordInput = document.createElement("input");
   const formSubmitButton = document.createElement("button");
   const triggerPasswordType = document.createElement("button");
-
-  const loginPageLink = document.createElement("a");
-  const dashboardPageLink = document.createElement("a");
-
+  
   Page.appendChild(loginPageLink);
   Page.appendChild(registerPageLink);
   Page.appendChild(dashboardPageLink);
+
   Page.appendChild(requirementsDiv);
   requirementsDiv.appendChild(counterButton);
   requirementsDiv.appendChild(toggleLogoButton);
@@ -39,12 +41,6 @@ if (Page) {
   formSubmitButton.textContent = `Submit`;
   triggerPasswordType.textContent = `Toggle Password Type`;
   loginPageLink.textContent = `Login Page`;
-  // registerPageLink.textContent = `Register Page`;
-  dashboardPageLink.textContent = `Dashboard Page`;
-
-  loginPageLink.href = `/denver/login`;
-    // registerPageLink.href = `/denver/register`;
-  dashboardPageLink.href = `/denver/dashboard`;
 
   logo.src = viteLogo;
 

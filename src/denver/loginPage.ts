@@ -3,6 +3,8 @@ import {
   passwordLogin,
   loginButton,
   anotherRegisterLink,
+  loginToggle,
+  toggleType
 } from "./createElements";
 import { User } from "../main";
 export const loginForm = document.createElement("form");
@@ -10,10 +12,14 @@ export const loginForm = document.createElement("form");
 if (loginForm) {
   loginForm.appendChild(emailLogin);
   loginForm.appendChild(passwordLogin);
+  loginForm.appendChild(loginToggle);
   loginForm.appendChild(loginButton);
   loginForm.appendChild(anotherRegisterLink);
   let isLoggedIn = false;
 
+  loginToggle.addEventListener("click", () => {
+    toggleType(loginToggle,passwordLogin);
+  });
   loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const Users = localStorage.getItem("Users");
@@ -31,7 +37,6 @@ if (loginForm) {
         const currentUser = JSON.stringify(parseUsers[i]);
         localStorage.setItem("User", currentUser);
         location.href = `/denver/dashboard`;
-   
       }
     }
     // if (parseUsers.find((users: User) => users.email === email)) {
