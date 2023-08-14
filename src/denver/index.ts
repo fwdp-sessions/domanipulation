@@ -39,11 +39,11 @@ if (Page) {
   formSubmitButton.textContent = `Submit`;
   triggerPasswordType.textContent = `Toggle Password Type`;
   loginPageLink.textContent = `Login Page`;
-  registerPageLink.textContent = `Register Page`;
+  // registerPageLink.textContent = `Register Page`;
   dashboardPageLink.textContent = `Dashboard Page`;
 
   loginPageLink.href = `/denver/login`;
-  registerPageLink.href = `/denver/register`;
+  // registerPageLink.href = `/denver/register`;
   dashboardPageLink.href = `/denver/dashboard`;
 
   logo.src = viteLogo;

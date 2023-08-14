@@ -26,32 +26,38 @@ if (registerForm) {
   registerForm.addEventListener("submit", (e: SubmitEvent) => {
     e.preventDefault();
     let emailExist: boolean = false;
-    let passwordConfirm: boolean = false;
-    const Users = localStorage.getItem("Users");
+    let passwordMatch: boolean = true;
 
+    const Users = localStorage.getItem("Users");
+    const parseUsers = JSON.parse(Users ?? "[]");
     const registerFormInputs = new FormData(e.target as HTMLFormElement);
     const email = registerFormInputs.get("email") as string;
     const password = registerFormInputs.get("password") as string;
+    const confirmPassword = registerFormInputs.get("confirmPassword") as string;
     const firstName = registerFormInputs.get("firstName") as string;
     const lastName = registerFormInputs.get("lastName") as string;
     const address = registerFormInputs.get("address") as string;
-    let checkAddress:string
-    if(address){
-      checkAddress = address
-    }
-    console.log(UserDB);
-    UserDB.push({
+
+    const userDetails: User = {
       email: email,
       password: password,
       firstName: firstName,
       lastName: lastName,
-      address: address,
-    } as User); 
-    console.log(UserDB);// can direclty push the input values
-    // if (emailExist === false && passwordConfirm === true) {
+    };
+    
+    if (parseUsers.find((users: User) => users.email === email)) {
+      emailExist = true;
+      console.log()
+    }
+    if (password !== confirmPassword) {
+      passwordMatch = false;
+    }
+    if (emailExist === false && passwordMatch === true) {
+      UserDB.push(userDetails);
 
-    // }
-    const stringifyUserDB = JSON.stringify(UserDB);
-    localStorage.setItem("Users", stringifyUserDB);
+      const stringifyUserDB = JSON.stringify([...parseUsers, UserDB[UserDB.length - 1]]);
+      localStorage.setItem("Users", stringifyUserDB);
+      location.href = `/denver/login`;
+    }
   });
 }
