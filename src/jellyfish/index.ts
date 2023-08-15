@@ -9,10 +9,6 @@ export const Page = document.createElement("div"); // Do not touch this line
 Page.innerHTML = "<h1>Jellyfish.</h1>";
 
 //  THe following is the code for the "Create 2 Buttons" requirement.
-//  Structure goes as follows:
-//  | twoButtons
-//      | jellyButton: buttonCounter()
-//      | viteButton: viteToggle()
 
 let counter = 0
 let jellyButton = document.createElement("button")
@@ -23,10 +19,12 @@ let viteButton = document.createElement("button")
 viteButton.innerText = "Vite Toggle"
 viteButton.onclick = () => viteToggle()
 
-let viteButtonState = 0
-let viteImageContainer = document.createElement("div")
+let imageButtonState = 0
+let imageContainer = document.createElement("div")
 let viteImage = document.createElement("img")
 viteImage.src = "/vite.svg"
+let tsImage = document.createElement("img")
+tsImage.src = "/src/typescript.svg"
 
 let buttonCounter = () => {
     counter += 1
@@ -36,51 +34,59 @@ let buttonCounter = () => {
 }
 
 let viteToggle = () => {
-    if (viteButtonState == 1) {
-        viteButtonState = 0
-        viteImageContainer.removeChild(viteImage)
-    } else if (viteButtonState == 0) {
-        viteButtonState = 1
-        viteImageContainer.appendChild(viteImage)
+    console.log(tsImage)
+    if (imageButtonState == 1) {
+        imageButtonState = 0
+        imageContainer.innerHTML = ""
+    } else if (imageButtonState == 0) {
+        imageButtonState = 1
+        if (counter % 2 == 0) imageContainer.appendChild(tsImage)
+        else imageContainer.appendChild(viteImage)
     }
 }
 
 let twoButtons = document.createElement("div")
-twoButtons.appendChild(viteImageContainer)
+twoButtons.appendChild(imageContainer)
 twoButtons.appendChild(jellyButton)
 twoButtons.appendChild(viteButton)
 
-// These are the code for the login page requirement.
-let passwordForm = document.createElement("form")
-let password = document.createElement("input")
-password.type = "password"
-let showPassword = document.createElement("input")
-showPassword.type = "checkbox"
-
-let listenEvents = document.createElement("div")
-passwordForm.appendChild(password)
-passwordForm.appendChild(showPassword)
-listenEvents.appendChild(passwordForm)
-
-let submitButton = document.createElement("button")
-submitButton.innerText = "Submit"
-
-
-let passwordStorage
-let revealPassword = () => {
-    if (showPassword.checked) password.type = "text"
-    else password.type = "password"
+// Add register and login buttons
+let registerButton = document.createElement("button")
+registerButton.innerText = "Register"
+registerButton.onclick = () => {
+    window.location.href = "/jellyfish/register"
 }
-submitButton.onclick = () => {
-    passwordStorage = {"password": password.value}
-    console.log(passwordStorage)
+
+let loginButton = document.createElement("button")
+loginButton.innerText = "Login"
+loginButton.onclick = () => {
+    window.location.href = "/jellyfish/login"
 }
-showPassword.addEventListener("click", () => {revealPassword()})
 
 // Render everything to append to Page
 Page.appendChild(twoButtons)
-Page.appendChild(listenEvents)
-Page.appendChild(submitButton)
+Page.appendChild(loginButton)
+Page.appendChild(registerButton)
+
+import { output as register } from "./register"
+import { output as login } from "./login"
+
+let workArea = document.createElement("div")
+Page.appendChild(workArea)
+workArea.appendChild(register)
+
+export const LoginPage = document.createElement("div")
+    LoginPage.appendChild(login)
+
+export const RegisterPage = document.createElement("div")
+    RegisterPage.appendChild(register)
+
+export const SignOut = () => {
+    console.log("SIGN OUT")
+}
+
+export const dashboard = document.createElement("div")
+    dashboard.innerHTML = "asd"
 
 // Code should end here
 //--------------------------------------------
