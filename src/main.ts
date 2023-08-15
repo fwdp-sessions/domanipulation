@@ -14,6 +14,12 @@ import { Page as Hotdog } from "./hotdog";
 // TODO: import { DashboardPage as DaydreamerDashboard } from './daydreamer/'
 // Do not touch the example
 
+import {
+  LoginPage as MatchuLogin,
+  RegisterPage as MatchuRegister,
+  DashboardPage as MatchuDashboard,
+} from "./matchu";
+
 export const LOCATION = location.pathname;
 
 export type User = {
@@ -43,11 +49,11 @@ const bootstrap = () => {
   } else if (LOCATION === "/matchu") {
     renderElement(Matchu);
   } else if (LOCATION === "/matchu/login") {
-    renderElement(Matchu);
+    renderElement(MatchuLogin);
   } else if (LOCATION === "/matchu/register") {
-    renderElement(Matchu);
+    renderElement(MatchuRegister);
   } else if (LOCATION === "/matchu/dashboard") {
-    // renderElement(MatchuDashboard);
+    renderElement(MatchuDashboard);
   } else if (LOCATION === "/jellyfish") {
     renderElement(Jellyfish);
   } else if (LOCATION === "/jellyfish/login") {
